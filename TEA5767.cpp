@@ -54,7 +54,7 @@ void TEA5767::get(){
 
 //Initialize and get available Stations
 short TEA5767::init(short minlvl){
-	Wire.begin();	
+	Wire.begin(20, 21);	
 	findStations(minlvl);	
 	return _staCnt;
 }
